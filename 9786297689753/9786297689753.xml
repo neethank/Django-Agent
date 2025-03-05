@@ -1,0 +1,83 @@
+<ONIXMessage>
+	<Header>
+		<FromCompany>UPM Press</FromCompany>
+		<FromPerson>Fatimah Binti Abdul Samad, +6011 236 38527</FromPerson>
+		<SentDate>20240925</SentDate>
+		<DefaultCurrencyCode>MYR</DefaultCurrencyCode>
+	</Header>
+	<Product>
+		<RecordReference>9786297689753</RecordReference>
+		<NotificationType>03</NotificationType>
+		<ProductIdentifier>
+			<ProductIDType>03</ProductIDType>
+			<IDValue>9786297689753</IDValue>
+		</ProductIdentifier>
+		<Barcode>02</Barcode>
+		<ProductForm>DG</ProductForm>
+		<Title>
+			<TitleType>01</TitleType>
+			<TitleText>Action for Depression</TitleText>
+		</Title>
+		<Website>
+			<WebsiteLink>https://https://upmpress.com.my/product/action-for-depression/</WebsiteLink>
+		</Website>
+		<Contributor>
+			<SequenceNumber>1</SequenceNumber>
+			<ContributorRole>B01</ContributorRole>
+			<NamesBeforeKey>Akmarina</NamesBeforeKey>
+			<KeyNames>Ahmad Othman</KeyNames>
+		</Contributor>
+		<Contributor>
+			<SequenceNumber>2</SequenceNumber>
+			<ContributorRole>B01</ContributorRole>
+			<NamesBeforeKey>Wan Marzuki</NamesBeforeKey>
+			<KeyNames>Wan Jaafar</KeyNames>
+		</Contributor>
+		<Contributor>
+			<SequenceNumber>3</SequenceNumber>
+			<ContributorRole>B01</ContributorRole>
+			<NamesBeforeKey>Zaida</NamesBeforeKey>
+			<KeyNames>Nor Zainudin</KeyNames>
+		</Contributor>
+		<Contributor>
+			<SequenceNumber>4</SequenceNumber>
+			<ContributorRole>B01</ContributorRole>
+			<NamesBeforeKey>Yusni</NamesBeforeKey>
+			<KeyNames>Mohamad Yusop</KeyNames>
+		</Contributor>
+		<Language>
+			<LanguageRole>01</LanguageRole>
+			<LanguageCode>eng</LanguageCode>
+		</Language>
+		<NumberOfPages>78</NumberOfPages>
+		<BASICMainSubject>PSY049000</BASICMainSubject>
+		<BASICMainSubject>SEL011000</BASICMainSubject>
+		<AudienceCode>01</AudienceCode>
+                <AudienceCode>05</AudienceCode>
+                <AudienceCode>06</AudienceCode>
+		<OtherText>
+			<TextTypeCode>04</TextTypeCode>
+			<Text>Struggling with depression can feel like an unending battle."ACTion for Depression" offers new way forward, combining the science of Acceptance and Commitment Therapy (ACT) with compassionate, real-world guidance. This book provides a roadmap for those seeking to understand and manage depression, focusing on acceptance, mindfulness, and values-based action. Whether you're a counsellor, a mental health professional, a person living with depression, or someone who supports a loved one, this book will empower you with practical tools to move beyond the struggle and build a life of meaning and fulfilment. Through clear explanations, relatable examples, and actionable exercises, "ACTion for Depression" will help you take the first steps toward accepting and rediscover a life worth living.</Text>
+                </OtherText>
+		<Imprint>
+			<NameCodeType>02</NameCodeType>
+			<NameCodeValue>05</NameCodeValue>
+			<ImprintName>UPM Press</ImprintName>
+		</Imprint>
+		<PublisherName>UPM Press</PublisherName>
+		<PublicationDate>20240101</PublicationDate>
+		<CopyrightStatement>
+			<CopyrightYear>2024</CopyrightYear>
+			<CopyrightOwner>
+				<CopyrightOwnerIdentifier>
+					<CopyrightOwnerIDType>02</CopyrightOwnerIDType>
+					<IDValue>UPM Press</IDValue>
+				</CopyrightOwnerIdentifier>
+			</CopyrightOwner>
+		</CopyrightStatement>
+		<SalesRights>
+			<SalesRightsType>01</SalesRightsType>
+			<RightsTerritory>WORLD</RightsTerritory>
+		</SalesRights>
+	</Product>
+</ONIXMessage>

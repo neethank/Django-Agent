@@ -1,0 +1,68 @@
+<ONIXMessage>
+	<Header>
+		<FromCompany>UPM Press</FromCompany>
+		<FromPerson>Fatimah Binti Abdul Samad, +6011 236 38527</FromPerson>
+		<SentDate>20240925</SentDate>
+		<DefaultCurrencyCode>MYR</DefaultCurrencyCode>
+	</Header>
+	<Product>
+		<RecordReference>9786297754307</RecordReference>
+		<NotificationType>03</NotificationType>
+		<ProductIdentifier>
+			<ProductIDType>03</ProductIDType>
+			<IDValue>9786297754307</IDValue>
+		</ProductIdentifier>
+		<Barcode>02</Barcode>
+		<ProductForm>DG</ProductForm>
+		<Title>
+			<TitleType>01</TitleType>
+			<TitleText>Navigating Children's Learning through Teacher Identity</TitleText>
+		</Title>
+		<Website>
+			<WebsiteLink>https://upmpress.com.my/product/navigating-childrens-learning-through-teacher-identity/</WebsiteLink>
+		</Website>
+		<Contributor>
+			<SequenceNumber>1</SequenceNumber>
+			<ContributorRole>B01</ContributorRole>
+			<NamesBeforeKey>Norhakimah Khaiessa</NamesBeforeKey>
+			<KeyNames>Ahmad</KeyNames>
+		</Contributor>
+		<Language>
+			<LanguageRole>01</LanguageRole>
+			<LanguageCode>eng</LanguageCode>
+		</Language>
+		<NumberOfPages>126</NumberOfPages>
+		<BASICMainSubject>EDU000000</BASICMainSubject>
+		<BASICMainSubject>EDU060000</BASICMainSubject>
+		<BASICMainSubject>EDU010000</BASICMainSubject>
+		<BASICMainSubject>EDU250000</BASICMainSubject>
+		<AudienceCode>01</AudienceCode>
+                <AudienceCode>05</AudienceCode>
+                <AudienceCode>06</AudienceCode>
+		<OtherText>
+			<TextTypeCode>04</TextTypeCode>
+			<Text>Are humans born to be teachers or do teachers develop their teaching skills over time? The quest to address this inquiry eventually led to “Navigating Children’s Learning through Teacher Identity”. This book was published as a form of providing scaffolding among practitioners who longed to understand who they perceive themselves as whenever they reflect on their professional practices. Hence, it serves to raise awareness and attract readers from different levels be it general readers, beginning or existing teachers, teacher educators, stakeholders, or new researchers.
+This book outlined how teachers who are teaching children visualised their professional roles in grammar teaching. Readers will see how these roles eventually lead to the primary and secondary role of identities. Most importantly, they will appreciate the power of stories narrated at several instances that accentuate teachers’ selves. I believe the sharing of this content might raise interests among readers to further explore their own identity and understand their selves, teaching, and their educational contexts. This book offers not only a timely discussion of professional roles in teaching but also establishes a springboard for a possible research agenda in the future. Finally, special thanks to UPM Press for successfully publishing this book.</Text>
+		</OtherText>
+		<Imprint>
+			<NameCodeType>02</NameCodeType>
+			<NameCodeValue>05</NameCodeValue>
+			<ImprintName>UPM Press</ImprintName>
+		</Imprint>
+		<PublisherName>UPM Press</PublisherName>
+		<PublicationDate>20240101</PublicationDate>
+		<CopyrightStatement>
+			<CopyrightYear>2024</CopyrightYear>
+			<CopyrightOwner>
+				<CopyrightOwnerIdentifier>
+					<CopyrightOwnerIDType>02</CopyrightOwnerIDType>
+					<IDValue>UPM Press</IDValue>
+				</CopyrightOwnerIdentifier>
+			</CopyrightOwner>
+		</CopyrightStatement>
+		<SalesRights>
+			<SalesRightsType>01</SalesRightsType>
+			<RightsTerritory>WORLD</RightsTerritory>
+		</SalesRights>
+	</Product>
+</ONIXMessage>
