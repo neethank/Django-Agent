@@ -64,3 +64,28 @@ If admin workflows are part of the feature, include:
 Permission defaults:
 
 - Use built-in Django/DRF permission mechanisms only (`IsAuthenticated`, `IsAdminUser`, `DjangoModelPermissions`, groups/model permissions).
+
+## Official References
+
+- DRF viewsets: `https://www.django-rest-framework.org/api-guide/viewsets/`
+- DRF routers: `https://www.django-rest-framework.org/api-guide/routers/`
+- DRF generic views hooks: `https://www.django-rest-framework.org/api-guide/generic-views/`
+- DRF serializers: `https://www.django-rest-framework.org/api-guide/serializers/`
+
+## Canonical Patterns
+
+```python
+class OrderViewSet(ModelViewSet):
+    queryset = Order.objects.all()
+    serializer_class = OrderSerializer
+
+    def perform_create(self, serializer):
+        serializer.save(created_by=self.request.user)
+```
+
+```python
+@api_view(["POST"])
+def approve_order(request, pk):
+    result = services.approve_order(order_id=pk, actor=request.user)
+    return Response(result)
+```
