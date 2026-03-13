@@ -1,13 +1,29 @@
 # Django Agent Suite
 
-This repository contains a markdown-only Django agent suite.
+Markdown-first Django agent pack for OpenCode.
 
-## Location
+## Structure
 
-- All agent files live in `agents/`.
-- Start with `agents/senior-django-engineer.md` as the orchestrator.
-- See `agents/AGENT_CATALOG.md` for agent roles.
-- See `agents/PROMPT_PACK.md` for starter prompts.
+- `agents/` - installable agent files.
+- `commands/opencode/` - OpenCode command wrappers.
+- `skills/` - reusable skills.
+- `meta/` - human docs (`AGENT_CATALOG.md`, `PROMPT_PACK.md`).
+- `scripts/` - install and validation scripts.
+
+## OpenCode Install
+
+- Project install (default target: `.opencode/`): `./scripts/install.sh --project`
+- Global install (target: `~/.config/opencode/`): `./scripts/install.sh --global`
+- Dry run: `./scripts/install.sh --dry-run`
+- Install only one component:
+  - agents: `./scripts/install.sh --agents`
+  - commands: `./scripts/install.sh --commands`
+  - skills: `./scripts/install.sh --skills`
+
+## Utilities
+
+- List installable assets: `./scripts/list.sh`
+- Validate structure and readiness: `./scripts/doctor.sh`
 
 ## Core Rules
 
