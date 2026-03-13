@@ -58,3 +58,16 @@ When migration changes are included:
 
 - `python manage.py makemigrations --check --dry-run`
 - `python manage.py migrate --plan`
+
+## Official References
+
+- Django testing overview: `https://docs.djangoproject.com/en/stable/topics/testing/overview/`
+- DRF testing: `https://www.django-rest-framework.org/api-guide/testing/`
+- DRF serializers: `https://www.django-rest-framework.org/api-guide/serializers/`
+- DRF permissions: `https://www.django-rest-framework.org/api-guide/permissions/`
+
+## Doc-grounded Rules
+
+- Prefer `APITestCase` and `APIClient` for endpoint tests.
+- Use serializer `is_valid(raise_exception=True)` patterns in API behavior tests.
+- Include permission matrix tests for anonymous/authenticated/staff paths.
