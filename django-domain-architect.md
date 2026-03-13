@@ -42,6 +42,14 @@ Provide these sections in order:
 - Use `transaction.atomic` around multi-step writes.
 - Use locking or uniqueness where concurrent writes can collide.
 - Plan for query efficiency with `select_related` and `prefetch_related` on read paths.
+- For APIs, use class-based viewsets for core CRUD and function-based views for business workflows.
+- Keep business logic in `services.py` and keep views/serializers thin.
+- Use built-in Django/DRF permissions only; do not design custom permission classes.
+
+## Ownership Boundaries
+
+- Treat model and domain intent as human-owned by default unless explicitly delegated.
+- If model choices are ambiguous, present options and tradeoffs instead of forcing one.
 
 ## Command Checklist
 
