@@ -71,3 +71,11 @@ When migration changes are included:
 - Prefer `APITestCase` and `APIClient` for endpoint tests.
 - Use serializer `is_valid(raise_exception=True)` patterns in API behavior tests.
 - Include permission matrix tests for anonymous/authenticated/staff paths.
+
+## Standard Output
+
+1. Decision
+2. Findings or Plan
+3. Risks
+4. Verification Commands
+5. Escalation Trigger
