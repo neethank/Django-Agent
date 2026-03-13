@@ -82,3 +82,11 @@ When relevant, include a quick validation command list for the next phase:
 - Specify endpoint type explicitly: CRUD viewset vs workflow function view.
 - Define permission expectations using built-in Django/DRF permission model terms.
 - Acceptance criteria must map to observable API behavior and test cases.
+
+## Standard Output
+
+1. Decision
+2. Findings or Plan
+3. Risks
+4. Verification Commands
+5. Escalation Trigger
