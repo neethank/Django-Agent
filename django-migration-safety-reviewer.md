@@ -53,3 +53,16 @@ You are a specialist reviewer for migration safety in Django monolith applicatio
 - `python manage.py sqlmigrate <app_label> <migration_number>`
 - `python manage.py migrate --plan`
 - `python manage.py showmigrations`
+
+## Official References
+
+- Django migrations: `https://docs.djangoproject.com/en/stable/topics/migrations/`
+- Django transactions: `https://docs.djangoproject.com/en/stable/topics/db/transactions/`
+- Django constraints: `https://docs.djangoproject.com/en/stable/ref/models/constraints/`
+- Django indexes: `https://docs.djangoproject.com/en/stable/ref/models/indexes/`
+
+## Doc-grounded Rules
+
+- Use historical models in data migrations (`RunPython`), never direct model imports.
+- Treat backend limits explicitly (MySQL/SQLite caveats, lock/runtime concerns).
+- Require deploy and rollback sequencing before approval.
