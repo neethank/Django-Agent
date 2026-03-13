@@ -1,0 +1,89 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+REPO="Burnsedia/Django-Agent"
+REF="master"
+
+TARGET="--global"
+declare -a PASSTHRU_FLAGS=()
+
+usage() {
+  cat <<'EOF'
+Bootstrap installer for Django Agent Suite.
+
+Defaults to global install (~/.config/opencode).
+
+Usage:
+  bash install [--project|--global] [--agents|--commands|--skills|--tools|--all] [--force] [--dry-run] [--ref <ref>]
+
+Examples:
+  bash install
+  bash install --project --force
+  bash install --global --commands
+
+When using curl:
+  curl -fsSL https://raw.githubusercontent.com/Burnsedia/Django-Agent/master/install | bash
+EOF
+}
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --project)
+      TARGET="--project"
+      ;;
+    --global)
+      TARGET="--global"
+      ;;
+    --agents|--commands|--skills|--tools|--all|--force|--dry-run)
+      PASSTHRU_FLAGS+=("$1")
+      ;;
+    --ref)
+      if [[ $# -lt 2 ]]; then
+        echo "Missing value for --ref" >&2
+        exit 1
+      fi
+      REF="$2"
+      shift
+      ;;
+    -h|--help)
+      usage
+      exit 0
+      ;;
+    *)
+      echo "Unknown option: $1" >&2
+      usage
+      exit 1
+      ;;
+  esac
+  shift
+done
+
+if ! command -v curl >/dev/null 2>&1; then
+  echo "curl is required for bootstrap install." >&2
+  exit 1
+fi
+
+if ! command -v tar >/dev/null 2>&1; then
+  echo "tar is required for bootstrap install." >&2
+  exit 1
+fi
+
+TMP_DIR="$(mktemp -d)"
+cleanup() {
+  rm -rf "${TMP_DIR}"
+}
+trap cleanup EXIT
+
+ARCHIVE_URL="https://codeload.github.com/${REPO}/tar.gz/${REF}"
+echo "Downloading ${REPO}@${REF}..."
+curl -fsSL "${ARCHIVE_URL}" | tar -xz -C "${TMP_DIR}" --strip-components=1
+
+INSTALLER="${TMP_DIR}/scripts/install.sh"
+if [[ ! -x "${INSTALLER}" ]]; then
+  chmod +x "${INSTALLER}"
+fi
+
+echo "Running installer (${TARGET})..."
+bash "${INSTALLER}" "${TARGET}" "${PASSTHRU_FLAGS[@]}"
+
+echo "Bootstrap install complete."
