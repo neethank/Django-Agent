@@ -10,13 +10,14 @@ FORCE=0
 INSTALL_AGENTS=1
 INSTALL_COMMANDS=1
 INSTALL_SKILLS=1
+INSTALL_TOOLS=1
 
 usage() {
   cat <<'EOF'
 Install Django Agent Suite into OpenCode directories.
 
 Usage:
-  ./scripts/install.sh [--project|--global] [--agents|--commands|--skills|--all] [--dry-run] [--force]
+  ./scripts/install.sh [--project|--global] [--agents|--commands|--skills|--tools|--all] [--dry-run] [--force]
 
 Flags:
   --project   Install to .opencode/ (default)
@@ -24,7 +25,8 @@ Flags:
   --agents    Install only agents
   --commands  Install only OpenCode commands
   --skills    Install only skills
-  --all       Install agents, commands, and skills (default)
+  --tools     Install local tool scripts into .opencode/tools
+  --all       Install agents, commands, skills, and tools (default)
   --dry-run   Show planned actions without writing files
   --force     Overwrite existing files
 EOF
@@ -38,21 +40,31 @@ while [[ $# -gt 0 ]]; do
       INSTALL_AGENTS=1
       INSTALL_COMMANDS=0
       INSTALL_SKILLS=0
+      INSTALL_TOOLS=0
       ;;
     --commands)
       INSTALL_AGENTS=0
       INSTALL_COMMANDS=1
       INSTALL_SKILLS=0
+      INSTALL_TOOLS=0
       ;;
     --skills)
       INSTALL_AGENTS=0
       INSTALL_COMMANDS=0
       INSTALL_SKILLS=1
+      INSTALL_TOOLS=0
+      ;;
+    --tools)
+      INSTALL_AGENTS=0
+      INSTALL_COMMANDS=0
+      INSTALL_SKILLS=0
+      INSTALL_TOOLS=1
       ;;
     --all)
       INSTALL_AGENTS=1
       INSTALL_COMMANDS=1
       INSTALL_SKILLS=1
+      INSTALL_TOOLS=1
       ;;
     --dry-run) DRY_RUN=1 ;;
     --force) FORCE=1 ;;
@@ -62,8 +74,8 @@ while [[ $# -gt 0 ]]; do
   shift
 done
 
-if [[ "${INSTALL_AGENTS}" -eq 0 && "${INSTALL_COMMANDS}" -eq 0 && "${INSTALL_SKILLS}" -eq 0 ]]; then
-  echo "Nothing selected to install. Use --all or one of --agents/--commands/--skills." >&2
+if [[ "${INSTALL_AGENTS}" -eq 0 && "${INSTALL_COMMANDS}" -eq 0 && "${INSTALL_SKILLS}" -eq 0 && "${INSTALL_TOOLS}" -eq 0 ]]; then
+  echo "Nothing selected to install. Use --all or one of --agents/--commands/--skills/--tools." >&2
   exit 1
 fi
 
@@ -73,16 +85,17 @@ else
   BASE_DIR="${REPO_ROOT}/.opencode"
 fi
 
-copy_dir() {
+copy_glob() {
   local src_dir="$1"
   local dst_dir="$2"
   local label="$3"
+  local pattern="$4"
   local copied=0
   local skipped=0
 
   mkdir -p "${dst_dir}"
 
-  for src in "${src_dir}"/*.md; do
+  for src in "${src_dir}"/${pattern}; do
     [[ -e "${src}" ]] || continue
     local name
     name="$(basename "${src}")"
@@ -109,15 +122,19 @@ copy_dir() {
 echo "Installing to: ${BASE_DIR}"
 
 if [[ "${INSTALL_AGENTS}" -eq 1 ]]; then
-  copy_dir "${REPO_ROOT}/agents" "${BASE_DIR}/agents" "agents"
+  copy_glob "${REPO_ROOT}/agents" "${BASE_DIR}/agents" "agents" "*.md"
 fi
 
 if [[ "${INSTALL_COMMANDS}" -eq 1 ]]; then
-  copy_dir "${REPO_ROOT}/commands/opencode" "${BASE_DIR}/commands" "commands"
+  copy_glob "${REPO_ROOT}/commands/opencode" "${BASE_DIR}/commands" "commands" "*.md"
 fi
 
 if [[ "${INSTALL_SKILLS}" -eq 1 ]]; then
-  copy_dir "${REPO_ROOT}/skills" "${BASE_DIR}/skills" "skills"
+  copy_glob "${REPO_ROOT}/skills" "${BASE_DIR}/skills" "skills" "*.md"
+fi
+
+if [[ "${INSTALL_TOOLS}" -eq 1 ]]; then
+  copy_glob "${REPO_ROOT}/tools" "${BASE_DIR}/tools" "tools" "*.sh"
 fi
 
 echo "Install complete."
