@@ -89,3 +89,11 @@ def approve_order(request, pk):
     result = services.approve_order(order_id=pk, actor=request.user)
     return Response(result)
 ```
+
+## Standard Output
+
+1. Decision
+2. Findings or Plan
+3. Risks
+4. Verification Commands
+5. Escalation Trigger
