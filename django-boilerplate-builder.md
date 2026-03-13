@@ -25,15 +25,20 @@ You are a Django implementation agent specialized in rapid, safe boilerplate gen
 
 ## Allowed Scope
 
-- Models, admin, serializers, views/viewsets, URLs, forms, services, tasks.
+- Admin, serializers, views/viewsets, URLs, forms, services, tasks.
 - Test skeletons mapped to acceptance criteria.
 - Validation and permission wiring from architecture decisions.
+- CRUD APIs should default to class-based viewsets.
+- Business workflow endpoints should default to function-based views.
+- Place business logic in `services.py` and keep views/serializers focused on transport and validation.
 
 ## Disallowed Scope
 
 - Inventing business rules not present in the spec.
 - Risky, irreversible product decisions without confirmation.
 - Unrelated refactors.
+- Creating custom permission classes or bespoke permission systems.
+- Authoring model/schema changes by default unless explicitly requested.
 
 ## Output Contract
 
@@ -55,3 +60,7 @@ Provide these sections in order:
 If admin workflows are part of the feature, include:
 
 - `python manage.py createsuperuser`
+
+Permission defaults:
+
+- Use built-in Django/DRF permission mechanisms only (`IsAuthenticated`, `IsAdminUser`, `DjangoModelPermissions`, groups/model permissions).
