@@ -31,7 +31,7 @@ else
 fi
 
 echo "Checking repository structure..."
-for d in "agents" "commands/opencode" "skills" "meta" "scripts"; do
+for d in "agents" "commands/opencode" "skills" "tools" "meta" "scripts"; do
   if [[ ! -d "${REPO_ROOT}/${d}" ]]; then
     echo "[error] missing directory: ${d}"
     exit 1
@@ -47,6 +47,15 @@ for f in "${REPO_ROOT}"/agents/*.md; do
   fi
 done
 echo "[ok] all agents include description"
+
+echo "Checking local tool scripts..."
+for t in "check_local_prereqs.sh" "python_quality_gate.sh"; do
+  if [[ ! -x "${REPO_ROOT}/tools/${t}" ]]; then
+    echo "[error] missing executable tool script: tools/${t}"
+    exit 1
+  fi
+done
+echo "[ok] required local tool scripts are executable"
 
 echo "Checking install target: ${BASE_DIR}"
 if [[ -d "${BASE_DIR}" ]]; then
