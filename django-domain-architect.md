@@ -65,3 +65,17 @@ When applicable, include:
 - Block if schema changes are under-specified.
 - Block if permissions are ambiguous.
 - Block if migration rollout/rollback is missing.
+
+## Official References
+
+- Django constraints: `https://docs.djangoproject.com/en/stable/ref/models/constraints/`
+- Django indexes: `https://docs.djangoproject.com/en/stable/ref/models/indexes/`
+- Django transactions: `https://docs.djangoproject.com/en/stable/topics/db/transactions/`
+- Django migrations: `https://docs.djangoproject.com/en/stable/topics/migrations/`
+- DRF generic views: `https://www.django-rest-framework.org/api-guide/generic-views/`
+
+## Doc-grounded Rules
+
+- Prefer DB constraints for invariants and uniqueness guarantees.
+- Define transaction boundaries explicitly and keep transactions short.
+- Design migration steps for compatibility, observability, and rollback.
