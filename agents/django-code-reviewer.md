@@ -54,10 +54,23 @@ You are a senior Django reviewer for monolith codebases.
 - Custom permission classes or custom permission framework logic.
 - CRUD endpoints implemented as function views without explicit justification.
 
+## Local Quality Gate Policy
+
+- Use local commands only; do not install dependencies or call external services.
+- Required checks are blocking:
+  - `ruff check .`
+  - `black --check .`
+  - `python manage.py check`
+  - `pytest -q`
+- `mypy .` is optional advisory only.
+- Missing required binaries or missing `manage.py` must be reported as `blocked`.
+
 ## Django Checks to Include When Relevant
 
 - `python manage.py check`
-- `python manage.py test`
+- `pytest -q`
+- `ruff check .`
+- `black --check .`
 
 ## Official References
 
