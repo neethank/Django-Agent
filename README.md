@@ -32,7 +32,7 @@ What you get:
 - Task-based workflow with minimal meetings
 - Full-stack execution across Django, Vue, Astro, Flutter, and related tooling
 
-Service page: [https://baileyburnsed.dev/service/](https://baileyburnsed.dev/service/)
+[Service page](https://baileyburnsed.dev/service/)
 
 ## Why This Is Different
 
